@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Safe - Sign Up</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='signup.css')}}" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <p>{{error}}</p>
+    <div class="header">
+      <div class="logo">
+        <img src="{{url_for('static', filename='Cash_safe.png')}}" alt="Cash Safe.png">
+      </div>
+      <nav>
+        <a href="{{url_for('dashboard')}}">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Sign Up</h1>
+      <form action="/signup" method="post">
+        <div class="form-group">
+          <label for="first_name">First Name <span>*</span></label>
+          <input type="text" id="first_name" name="first_name" required>
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last Name <span>*</span></label>
+          <input type="text" id="last_name" name="last_name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email <span>*</span></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone No. <span>*</span></label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="house_no">House No. <span>*</span></label>
+          <input type="text" id="house_no" name="house_no" required>
+        </div>
+        <div class="form-group">
+          <label for="street_no">Street No. <span>*</span></label>
+          <input type="text" id="street_no" name="street_no" required>
+        </div>
+        <div class="form-group">
+          <label for="area">Area <span>*</span></label>
+          <input type="text" id="area" name="area" required>
+        </div>
+        <div class="form-group">
+          <label for="city">City <span>*</span></label>
+          <input type="text" id="city" name="city" required>
+        </div>
+        <div class="form-group">
+          <label for="country">Country <span>*</span></label>
+          <input type="text" id="country" name="country" required>
+        </div>
+        <input type="submit" value="Sign Up">
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
